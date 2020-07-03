@@ -39,18 +39,27 @@ public class Magic8Ball3 { //POJO - Plain Ole java Object
 		
 	}
 
-	public String shake()
+	public String shake() {
+		
+		Random r = new Random();
+		int randomindex=r.nextInt(6);
+		
+		System.out.println("Random item:" + answers.get(randomindex));
+		return answers.get(randomindex);
+		
+		
+		}
  {
-		String randomElement = answers.get(rand.nextInt(answers.size()));
-		System.out.println(randomElement);
-		System.out.println(choice);
+		//String randomElement = answers.get(rand.nextInt(answers.size()));
+		//System.out.println(randomElement);
+		//System.out.println(choice);
 		//int rnd = new Random().nextInt(this.answers.length);
 		//System.out.println(this.answers[rnd]);
 		//return this.answers[rnd];
 		//Return a random element from the list.
 		//???Use Random class to create random number
 		//??? Use Random number to get element from ArrayList
-		return answers.get(choice);
+		//return answers.get(choice);
 		
 	}
 

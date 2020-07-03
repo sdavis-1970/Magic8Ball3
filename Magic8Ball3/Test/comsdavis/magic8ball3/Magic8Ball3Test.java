@@ -27,17 +27,20 @@ class Magic8Ball3Test {
 	
 	@Test
 	@Order(2)
-	void askQestion_GivenAString_ShouldReturnTrue() {
+	void askQuestion_GivenAString_ShouldReturnTrue() {
 		boolean success = false;
 		String question = "Should I cut bangs into my hair?";
 		
 		success = m8b3.askQuestion(question);
 		assertTrue(success);
 		assertEquals(question, m8b3.getQuestion());
+		Object answers;
+	}
+		
 		
 			
 		
-	}
+	
 	@Test
 	@Order(3)
 	void shake_GivenNoParameters_ShouldReturnAnser() {
@@ -45,6 +48,7 @@ class Magic8Ball3Test {
 		answer = m8b3.shake();
 		assertNotEquals("Idiot!", answer);
 		assertNotNull(answer);
+		
 		
 		
 		
